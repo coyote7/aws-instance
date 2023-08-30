@@ -20,6 +20,7 @@ resource "aws_instance" "test-server" {
                echo "Welcome to Our   Portal">index.html
                nohup busybox http -f -p  8080
                 EOF
+  user_data_replace_on_change = true
 
 }
 resource "aws_security_group" "test-sgrp" {
